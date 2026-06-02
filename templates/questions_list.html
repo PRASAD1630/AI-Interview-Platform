@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+
+{% block title %}
+Interview Questions
+{% endblock %}
+
+{% block content %}
+
+<div class="row justify-content-center">
+
+    <div class="col-lg-10">
+
+        <div class="glass-card p-5">
+
+            <div class="text-center">
+
+                <h1 class="mb-3">
+                    🤖 AI Generated Interview Questions
+                </h1>
+
+                <p class="text-light">
+                    Practice these questions before attending your interview.
+                </p>
+
+            </div>
+
+            <hr class="text-light">
+
+            <div class="glass-card p-4">
+
+                {{ questions_html|safe }}
+
+            </div>
+
+            <div class="text-center mt-4">
+
+                <a href="/dashboard"
+                   class="btn btn-primary btn-lg">
+
+                    🏠 Back To Dashboard
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+{% endblock %}

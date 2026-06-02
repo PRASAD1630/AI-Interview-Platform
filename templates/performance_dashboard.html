@@ -1,0 +1,162 @@
+{% extends "base.html" %}
+
+{% block title %}
+Analytics Dashboard
+{% endblock %}
+
+{% block content %}
+
+<div class="container">
+
+    <div class="text-center mb-5">
+
+        <h1>
+            📊 Analytics Dashboard
+        </h1>
+
+        <p class="text-light">
+            Track your interview preparation performance.
+        </p>
+
+    </div>
+
+    <div class="row g-4">
+
+        <div class="col-md-4">
+
+            <div class="glass-card p-4 text-center">
+
+                <h1>📄</h1>
+
+                <h3>{{ total_resumes }}</h3>
+
+                <p>Total Resumes</p>
+
+            </div>
+
+        </div>
+
+        <div class="col-md-4">
+
+            <div class="glass-card p-4 text-center">
+
+                <h1>🎤</h1>
+
+                <h3>{{ total_interviews }}</h3>
+
+                <p>Total Interviews</p>
+
+            </div>
+
+        </div>
+
+        <div class="col-md-4">
+
+            <div class="glass-card p-4 text-center">
+
+                <h1>🎯</h1>
+
+                <h3>{{ avg_ats }}%</h3>
+
+                <p>Average ATS Score</p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <br>
+
+    <div class="glass-card p-4">
+
+        <h3>
+            📈 Performance Analytics
+        </h3>
+
+        <canvas id="performanceChart"></canvas>
+
+    </div>
+
+    <br>
+
+    <div class="glass-card p-4">
+
+        <h3>
+            🚀 Recommendations
+        </h3>
+
+        <ul>
+
+            <li>Improve ATS score above 85%</li>
+
+            <li>Practice more mock interviews</li>
+
+            <li>Add missing skills to resume</li>
+
+            <li>Upload updated resumes regularly</li>
+
+        </ul>
+
+    </div>
+
+    <div class="text-center mt-4">
+
+        <a href="/dashboard"
+           class="btn btn-primary btn-lg">
+
+            🏠 Back To Dashboard
+
+        </a>
+
+    </div>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script>
+
+const ctx =
+document.getElementById(
+    'performanceChart'
+);
+
+new Chart(ctx, {
+
+    type: 'bar',
+
+    data: {
+
+        labels: [
+            'Resumes',
+            'Interviews',
+            'ATS Score'
+        ],
+
+        datasets: [{
+
+            label: 'Performance',
+
+            data: [
+
+                {{ total_resumes }},
+                {{ total_interviews }},
+                {{ avg_ats }}
+
+            ]
+
+        }]
+    },
+
+    options: {
+
+        responsive: true
+
+    }
+
+});
+
+</script>
+
+{% endblock %}

@@ -1,0 +1,207 @@
+{% extends "base.html" %}
+
+{% block title %}
+ATS Analysis Report
+{% endblock %}
+
+{% block content %}
+
+<div class="row justify-content-center">
+
+    <div class="col-lg-10">
+
+        <div class="glass-card p-5">
+
+            <div class="text-center">
+
+                <h1 class="mb-3">
+                    🎯 ATS Analysis Report
+                </h1>
+
+                <h4>
+                    Target Role:
+                    <span class="text-info">
+                        {{ role }}
+                    </span>
+                </h4>
+
+            </div>
+
+            <hr class="text-light">
+
+            <h3 class="mb-3">
+                ATS Score
+            </h3>
+
+            <div class="progress mb-4"
+                 style="height:40px;">
+
+                <div
+                    class="progress-bar bg-success progress-bar-striped progress-bar-animated"
+                    role="progressbar"
+                    style="width: {{ ats_score }}%;">
+
+                    {{ ats_score }}%
+
+                </div>
+
+            </div>
+
+            <div class="row">
+
+                <!-- Detected Skills -->
+
+                <div class="col-md-6 mb-4">
+
+                    <div class="glass-card p-4 h-100">
+
+                        <h3>
+                            ✅ Detected Skills
+                        </h3>
+
+                        <hr>
+
+                        {% if skills %}
+
+                            <ul>
+
+                                {% for skill in skills %}
+
+                                <li>
+                                    {{ skill }}
+                                </li>
+
+                                {% endfor %}
+
+                            </ul>
+
+                        {% else %}
+
+                            <p>
+                                No skills detected.
+                            </p>
+
+                        {% endif %}
+
+                    </div>
+
+                </div>
+
+                <!-- Missing Skills -->
+
+                <div class="col-md-6 mb-4">
+
+                    <div class="glass-card p-4 h-100">
+
+                        <h3>
+                            ❌ Missing Skills
+                        </h3>
+                        <div class="glass-card p-4 mt-4">
+
+    <h3>
+        🚀 Improvement Suggestions
+    </h3>
+
+    <hr>
+
+    <ul>
+
+        {% for item in suggestions %}
+
+        <li>
+            {{ item }}
+        </li>
+
+        {% endfor %}
+
+    </ul>
+
+</div>
+
+                        <hr>
+
+                        {% if missing_skills %}
+
+                            <ul>
+
+                                {% for skill in missing_skills %}
+
+                                <li>
+                                    {{ skill }}
+                                </li>
+
+                                {% endfor %}
+
+                            </ul>
+
+                        {% else %}
+
+                            <p>
+                                No missing skills found.
+                            </p>
+
+                        {% endif %}
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Resume Text -->
+
+            <div class="glass-card p-4">
+
+                <h3>
+                    📄 Extracted Resume Text
+                </h3>
+
+                <hr>
+
+                <pre style="
+                    white-space: pre-wrap;
+                    color: white;
+                    font-size:14px;
+                    max-height:400px;
+                    overflow-y:auto;
+                ;">
+
+{{ resume_text }}
+
+                </pre>
+
+            </div>
+
+            <div class="text-center mt-4">
+
+                <div class="text-center mt-4">
+
+    <a href="/download_report"
+       class="btn btn-success btn-lg me-3">
+
+        📥 Download ATS Report
+
+    </a>
+
+    <a href="/dashboard"
+       class="btn btn-primary btn-lg">
+
+        🏠 Dashboard
+
+    </a>
+
+</div>
+
+                    Back To Dashboard
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+{% endblock %}

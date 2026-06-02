@@ -1,0 +1,131 @@
+{% extends "base.html" %}
+
+{% block title %}
+Mock Interview
+{% endblock %}
+
+{% block content %}
+
+<div class="row justify-content-center">
+
+    <div class="col-lg-10">
+
+        <div class="glass-card p-5">
+
+            <div class="text-center">
+
+                <h1>
+                    🎤 AI Mock Interview
+                </h1>
+
+                <p class="text-light">
+                    Practice your interview skills and get instant AI feedback.
+                </p>
+
+            </div>
+
+            <hr class="text-light">
+
+            <form method="POST">
+
+                <div class="mb-4">
+
+                    <label class="form-label">
+                        Interview Question
+                    </label>
+
+                    <textarea
+                        name="question"
+                        rows="4"
+                        class="form-control"
+                        placeholder="Example: Explain Machine Learning and its applications."
+                        required></textarea>
+
+                </div>
+
+                <div class="mb-4">
+
+                    <label class="form-label">
+                        Your Answer
+                    </label>
+
+                    <textarea
+                        name="answer"
+                        rows="10"
+                        class="form-control"
+                        placeholder="Write your answer here..."
+                        required></textarea>
+
+                </div>
+
+                <button
+                    type="submit"
+                    class="btn btn-success btn-lg w-100">
+
+                    🚀 Evaluate My Answer
+
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</div>
+
+<br>
+
+<div class="row">
+
+    <div class="col-md-4">
+
+        <div class="glass-card p-4 text-center">
+
+            <h1>🤖</h1>
+
+            <h5>AI Evaluation</h5>
+
+            <p>
+                Receive detailed AI feedback for every answer.
+            </p>
+
+        </div>
+
+    </div>
+
+    <div class="col-md-4">
+
+        <div class="glass-card p-4 text-center">
+
+            <h1>🎯</h1>
+
+            <h5>Skill Improvement</h5>
+
+            <p>
+                Discover areas that need improvement.
+            </p>
+
+        </div>
+
+    </div>
+
+    <div class="col-md-4">
+
+        <div class="glass-card p-4 text-center">
+
+            <h1>🏆</h1>
+
+            <h5>Interview Readiness</h5>
+
+            <p>
+                Practice before your real interview.
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
+
+{% endblock %}

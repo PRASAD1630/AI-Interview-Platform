@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+
+{% block title %}
+Interview History
+{% endblock %}
+
+{% block content %}
+
+<div class="row justify-content-center">
+
+    <div class="col-lg-11">
+
+        <div class="glass-card p-5">
+
+            <div class="text-center">
+
+                <h1>
+                    📝 Interview History
+                </h1>
+
+                <p class="text-light">
+                    View your previous interview attempts and AI feedback.
+                </p>
+
+            </div>
+
+            <hr class="text-light">
+
+            <div class="table-responsive">
+
+                {{ table|safe }}
+
+            </div>
+
+            <div class="text-center mt-4">
+
+                <a href="/dashboard"
+                   class="btn btn-primary">
+
+                    🏠 Back To Dashboard
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+{% endblock %}

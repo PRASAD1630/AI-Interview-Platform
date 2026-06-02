@@ -1,0 +1,123 @@
+{% extends "base.html" %}
+
+{% block title %}
+Upload Resume
+{% endblock %}
+
+{% block content %}
+
+<div class="row justify-content-center">
+
+    <div class="col-lg-8">
+
+        <div class="glass-card p-5">
+
+            <div class="text-center">
+
+                <h1 class="mb-3">
+                    📄 Resume Analyzer
+                </h1>
+
+                <p class="text-light">
+                    Upload your resume and let AI analyze your skills,
+                    ATS score, and interview readiness.
+                </p>
+
+            </div>
+
+            <hr class="text-light">
+
+            <form
+                method="POST"
+                enctype="multipart/form-data">
+
+                <div class="mb-4">
+
+                    <label class="form-label">
+                        Select Resume (PDF)
+                    </label>
+
+                    <input
+                        type="file"
+                        name="resume"
+                        accept=".pdf"
+                        class="form-control"
+                        required>
+
+                </div>
+
+                <div class="text-center">
+
+                    <button
+                        type="submit"
+                        class="btn btn-success btn-lg">
+
+                        🚀 Analyze Resume
+
+                    </button>
+
+                </div>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</div>
+
+<br>
+
+<div class="row">
+
+    <div class="col-md-4">
+
+        <div class="glass-card p-4 text-center">
+
+            <h1>🤖</h1>
+
+            <h5>AI Skill Extraction</h5>
+
+            <p>
+                Gemini AI extracts technical skills automatically.
+            </p>
+
+        </div>
+
+    </div>
+
+    <div class="col-md-4">
+
+        <div class="glass-card p-4 text-center">
+
+            <h1>🎯</h1>
+
+            <h5>ATS Analysis</h5>
+
+            <p>
+                Calculates ATS score based on selected role.
+            </p>
+
+        </div>
+
+    </div>
+
+    <div class="col-md-4">
+
+        <div class="glass-card p-4 text-center">
+
+            <h1>📈</h1>
+
+            <h5>Improvement Suggestions</h5>
+
+            <p>
+                Detects missing skills and improvement areas.
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
+
+{% endblock %}

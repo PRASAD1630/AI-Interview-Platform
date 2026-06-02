@@ -1,0 +1,140 @@
+{% extends "base.html" %}
+
+{% block title %}
+Select Role
+{% endblock %}
+
+{% block content %}
+
+<div class="row justify-content-center">
+
+    <div class="col-lg-6">
+
+        <div class="glass-card p-5">
+
+            <div class="text-center">
+
+                <h1>
+                    🎯 Select Interview Role
+                </h1>
+
+                <p class="text-light">
+                    Choose your target job role and generate AI interview questions.
+                </p>
+
+            </div>
+
+            <hr class="text-light">
+
+            <form method="POST">
+
+                <label class="form-label">
+                    Select Role
+                </label>
+
+                <select
+                    name="role"
+                    class="form-select mb-4"
+                    required>
+
+                    <option value="">
+                        Choose Role
+                    </option>
+
+                    <option>
+                        Data Scientist
+                    </option>
+
+                    <option>
+                        AI Engineer
+                    </option>
+
+                    <option>
+                        Machine Learning Engineer
+                    </option>
+
+                    <option>
+                        Full Stack Developer
+                    </option>
+
+                    <option>
+                        Backend Developer
+                    </option>
+
+                    <option>
+                        Frontend Developer
+                    </option>
+
+                </select>
+
+                <button
+                    type="submit"
+                    class="btn btn-success btn-lg w-100">
+
+                    🚀 Generate AI Questions
+
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</div>
+
+<br>
+
+<div class="row">
+
+    <div class="col-md-4">
+
+        <div class="glass-card p-4 text-center">
+
+            <h1>🤖</h1>
+
+            <h5>AI Questions</h5>
+
+            <p>
+                Generate role-specific interview questions.
+            </p>
+
+        </div>
+
+    </div>
+
+    <div class="col-md-4">
+
+        <div class="glass-card p-4 text-center">
+
+            <h1>🎤</h1>
+
+            <h5>Mock Interviews</h5>
+
+            <p>
+                Practice interviews with AI evaluation.
+            </p>
+
+        </div>
+
+    </div>
+
+    <div class="col-md-4">
+
+        <div class="glass-card p-4 text-center">
+
+            <h1>📈</h1>
+
+            <h5>Performance Tracking</h5>
+
+            <p>
+                Track ATS scores and interview progress.
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
+
+{% endblock %}

@@ -1,0 +1,197 @@
+{% extends "base.html" %}
+
+{% block title %}
+Dashboard
+{% endblock %}
+
+{% block content %}
+
+<div class="container">
+
+    <div class="text-center mb-5">
+
+        <h1 class="fw-bold">
+            Welcome, {{ session['user'] }} 👋
+        </h1>
+
+        <p class="text-light">
+            Your AI-Powered Interview Preparation Hub
+        </p>
+
+    </div>
+
+    <div class="row g-4">
+
+        <div class="col-md-4">
+
+            <a href="/upload_resume"
+               class="text-decoration-none">
+
+                <div class="glass-card p-4 text-center">
+
+                    <h1>📄</h1>
+
+                    <h4>Resume Analyzer</h4>
+
+                    <p>
+                        Upload and analyze your resume.
+                    </p>
+
+                </div>
+
+            </a>
+
+        </div>
+
+        <div class="col-md-4">
+
+            <a href="/select_role"
+               class="text-decoration-none">
+
+                <div class="glass-card p-4 text-center">
+
+                    <h1>🤖</h1>
+
+                    <h4>Generate Questions</h4>
+
+                    <p>
+                        AI-generated role-based questions.
+                    </p>
+
+                </div>
+
+            </a>
+
+        </div>
+
+        <div class="col-md-4">
+
+            <a href="/questions"
+               class="text-decoration-none">
+
+                <div class="glass-card p-4 text-center">
+
+                    <h1>❓</h1>
+
+                    <h4>Questions Bank</h4>
+
+                    <p>
+                        View generated interview questions.
+                    </p>
+
+                </div>
+
+            </a>
+
+        </div>
+
+        <div class="col-md-4">
+
+            <a href="/mock_interview"
+               class="text-decoration-none">
+
+                <div class="glass-card p-4 text-center">
+
+                    <h1>🎤</h1>
+
+                    <h4>Mock Interview</h4>
+
+                    <p>
+                        Practice interviews with AI.
+                    </p>
+
+                </div>
+
+            </a>
+
+        </div>
+
+        <div class="col-md-4">
+
+            <a href="/history"
+               class="text-decoration-none">
+
+                <div class="glass-card p-4 text-center">
+
+                    <h1>📁</h1>
+
+                    <h4>Resume History</h4>
+
+                    <p>
+                        View all uploaded resumes.
+                    </p>
+
+                </div>
+
+            </a>
+
+        </div>
+
+        <div class="col-md-4">
+
+            <a href="/interview_history"
+               class="text-decoration-none">
+
+                <div class="glass-card p-4 text-center">
+
+                    <h1>📝</h1>
+
+                    <h4>Interview History</h4>
+
+                    <p>
+                        Review previous interviews.
+                    </p>
+
+                </div>
+
+            </a>
+
+        </div>
+
+        <div class="col-md-6">
+
+            <a href="/analytics"
+               class="text-decoration-none">
+
+                <div class="glass-card p-4 text-center">
+
+                    <h1>📊</h1>
+
+                    <h4>/analytics</h4>
+
+                    <p>
+                        Analyze ATS scores and performance.
+                    </p>
+
+                </div>
+
+            </a>
+
+        </div>
+
+        <div class="col-md-6">
+
+            <a href="/logout"
+               class="text-decoration-none">
+
+                <div class="glass-card p-4 text-center">
+
+                    <h1>🚪</h1>
+
+                    <h4>Logout</h4>
+
+                    <p>
+                        Sign out from your account.
+                    </p>
+
+                </div>
+
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+
+{% endblock %}
